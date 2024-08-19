@@ -1,3 +1,153 @@
+:root{
+    --primary-color: #684BB1;
+    --icon-hover: #FF52C1;
+    --button-hover: #E880E8;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 html{
-    background-color: red;
+    font-size: 62.5%;
+    background-image: url('../images/bg-desktop.svg');
+    background-color: #684BB1;
+}
+
+header{
+    width: 100%;
+    height: 120px;
+    padding: 35px;
+    align-content: center;
+    margin-bottom: 35px;
+
+    img{
+        width: auto;
+    }
+}
+
+.main-container{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    gap: 35px;
+
+    .main-img-section{
+        width: 40%;
+        height: auto;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .main-info-section{
+        width: 40%;
+        height: auto;
+
+        h3{
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 4rem;
+            line-height: 6rem;
+            color: white;
+        }
+
+        p{
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.8rem;
+            line-height: 2.7rem;
+            color: white;
+            margin-top: 35px;
+        }
+
+        button{
+            border: none;
+            background-color: white;
+            width: 200px;
+            height: 56px;
+            border-radius: 35px;
+            margin-top: 35px;
+        }
+
+    }
+    
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+
+    .social-container{
+        display: flex;
+        margin-right: 50px;
+
+        img{
+            margin-right: 15px;
+        }
+    }
+}
+
+@media (max-width: 500px){
+    html{
+        background-image: url('../images/bg-mobile.svg');
+        position: relative;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: #684BB1;
+    }
+
+    .main-container{
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        height: auto;
+
+        .main-img-section{
+            width: 80%;
+        }
+
+        .main-info-section{
+            width: 80%;
+            text-align: center;
+
+            h3{
+                font-size: 2.4rem;
+            }
+            p{
+                font-size: 1.6rem;
+            }
+            button{
+                width: 200px;
+                height: 40px;
+                
+            }
+        }
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        bottom: 0;
+
+        .social-container{
+            margin: 15px auto;
+
+        }
+    }
+
+   
 }
